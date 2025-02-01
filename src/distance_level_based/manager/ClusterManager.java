@@ -1,8 +1,8 @@
-package zoom_level_based.manager;
+package distance_level_based.manager;
 
-import zoom_level_based.entity.Cluster;
-import zoom_level_based.entity.Coordinate;
-import zoom_level_based.util.DistanceUtils;
+import distance_level_based.entity.Cluster;
+import distance_level_based.entity.Coordinate;
+import distance_level_based.util.DistanceUtils;
 
 import java.util.ArrayList;
 import java.util.List;

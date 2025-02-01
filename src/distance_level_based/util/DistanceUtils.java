@@ -1,4 +1,4 @@
-package zoom_level_based.util;
+package distance_level_based.util;
 
 public class DistanceUtils {
     private static final double EARTH_RADIUS = 6371.0; // km

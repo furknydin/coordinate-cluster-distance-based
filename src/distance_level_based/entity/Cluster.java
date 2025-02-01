@@ -1,4 +1,4 @@
-package zoom_level_based.entity;
+package distance_level_based.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class Cluster {
     private double lat;
     private double lon;
-    private List<Coordinate> coordinates =  new ArrayList<>();
+    private final List<Coordinate> coordinates =  new ArrayList<>();
 
     public Cluster(Coordinate coordinate) {
         this.lat = coordinate.getLat();
@@ -20,7 +20,8 @@ public class Cluster {
     }
 
     private void updateCenter() {
-        double sumLat = 0, sumLon = 0;
+        double sumLat = 0;
+        double sumLon = 0;
         for (Coordinate m : coordinates) {
             sumLat += m.getLat();
             sumLon += m.getLon();
@@ -41,7 +42,12 @@ public class Cluster {
         return lon;
     }
 
-    public List<Coordinate> getCoordinates() {
-        return coordinates;
+    @Override
+    public String toString() {
+        return "Cluster{" +
+                "lat=" + lat +
+                ", lon=" + lon +
+                ", coordinates=" + coordinates +
+                '}';
     }
 }

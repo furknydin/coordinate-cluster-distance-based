@@ -1,10 +1,10 @@
-package zoom_level_based.entity;
+package distance_level_based.entity;
 
 public class Coordinate {
-    private double lat;
-    private double lon;
-    private String name;
-    private String date;
+    private final double lat;
+    private final double lon;
+    private final String name;
+    private final String date;
 
     public Coordinate(double lat, double lon, String name, String date) {
         this.lat = lat;
@@ -21,11 +21,13 @@ public class Coordinate {
         return lon;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDate() {
-        return date;
+    @Override
+    public String toString() {
+        return "Coordinate{" +
+                "lat=" + lat +
+                ", lon=" + lon +
+                ", name='" + name + '\'' +
+                ", date='" + date + '\'' +
+                '}';
     }
 }
